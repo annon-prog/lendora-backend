@@ -23,7 +23,17 @@ func main() {
 
 }
 
-// load environment variables
+/**
+ * @Function Name: loadFile
+ *
+ * @Description:
+ * Helper function used to load environment variables
+ *
+ * @Params:
+ *
+ *
+ * @Returns:
+ */
 func loadFile() {
 
 	err := godotenv.Load()

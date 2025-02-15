@@ -6,6 +6,17 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+/**
+ * @Function Name: Routes
+ *
+ * @Description:
+ * Function used to handle route set up
+ *
+ * @Params:
+ * router *gin.Engine
+ *
+ * @Returns:
+ */
 func Routes(router *gin.Engine) {
 
 	//starter url
