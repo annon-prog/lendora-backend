@@ -8,9 +8,6 @@ import (
 	"os"
 	"strconv"
 
-	// "net/smtp"
-
-	// "net/smtp"
 	"notification-service/models"
 
 	"gopkg.in/gomail.v2"
@@ -18,41 +15,17 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// func SendEmails(c *gin.Context) {
-
-// 	var data models.EmailResponse
-
-// 	//define our smtp credentials
-// 	from := os.Getenv("FROM_ADDRESS")
-// 	pass := os.Getenv("EMAIL_PASS")
-// 	host := os.Getenv("EMAIL_HOST")
-// 	port := os.Getenv("EMAIL_HOST")
-// 	address := host + ":" + port
-
-// 	//fetch message and recipient from request body
-// 	//parse request body
-// 	if err := c.ShouldBindJSON(&data); err != nil {
-// 		fmt.Printf("Failed to parse request body: %v", err)
-// 		c.JSON(http.StatusBadRequest, gin.H{
-// 			"error": fmt.Sprintf("Failed to parse request body:%v", err.Error()),
-// 		})
-// 	}
-
-// 	//authenticate smtp credentials
-// 	auth := smtp.PlainAuth("", from, pass, host)
-
-// 	//invoke function to send email message
-// 	if err := smtp.SendMail(address, auth, from, []string{data.Recipient}, []byte(data.Message)); err != nil {
-// 		fmt.Printf("Failed to send email message: %v", err)
-// 		c.JSON(http.StatusBadRequest, gin.H{
-// 			"error": fmt.Sprintf("Failed to send email message:%v", err.Error()),
-// 		})
-// 	}
-
-// 	fmt.Printf("Successfully sent out email message to recipient %s", data.Recipient)
-
-// }
-
+/**
+ * @Function Name: SendEmails
+ *
+ * @Description:
+ * Handler function used to send out email notifications
+ *
+ * @Params:
+ * c *gin.Context
+ *
+ * @Returns:
+ */
 func SendEmails(c *gin.Context) {
 
 	var data models.EmailResponse
